@@ -1,0 +1,58 @@
+export interface ListsType {
+  id: number;
+  logo: string;
+  name: string;
+  symbol: string;
+  status: string;
+  description: string;
+  softCap: string;
+  hardCap: string;
+  progress: number;
+  price: string;
+  liquidity: number;
+  lockTime: string;
+  amountRaised: string;
+  presaleAddress: string;
+  totalSupply: string;
+  presaleTokens: string;
+  tokenDecimal: number;
+}
+
+export type saleObj = {
+  saleIndex?: string;
+  logoUrl?: string;
+  tokenSymbol?: string;
+  status?: string;
+  projectName?: string;
+  description?: string;
+  softCap?: number;
+  tokenTotalSupply: string;
+  tokensForPresale?: string;
+  startTime: number;
+  endTime: number;
+  hardCap?: number;
+  progress?: number;
+  presaleRate: string;
+  dexListingRate?: number;
+  dexListingPercent?: number;
+  liquidityLockupTime?: number;
+  amountRaised?: number;
+  tokenDecimals?: number;
+  totalSupply: number;
+  presaleAddress?: number;
+  tokenAddress?: number;
+  tokenSaleAmount: number;
+  tokenName?: string;
+  isFinalized?: boolean;
+  isSuccessful?: boolean;
+  isEnded?: boolean;
+  saleCreator?: string;
+  minBuy?: number;
+  maxBuy?: number;
+  facebook?: string;
+  reddit?: string;
+  twitter?: string;
+  github?: string;
+  website?: string;
+  telegram?: string;
+};
