@@ -2,7 +2,7 @@ import moment from "moment";
 import web3 from "web3";
 import InuLogo from "../assets/images/inu-logo.jpg";
 import { saleObj } from "../pages/Dashboard/LaunchPad/Lists/types";
-import { create, Options } from "ipfs-http-client";
+import {create} from "ipfs-http-client";
 
 export const etherMap: any = {
   18: "ether",
@@ -155,8 +155,11 @@ export const sanitize = (str: string | any) => {
 };
 
 /* Create an instance of the client */
-create();
-const client = create({ url: "https://ipfs.infura.io:5001/api/v0" });
+// create();
+
+
+
+const client = create({ url: "https://ipfs.infura.io:5002/api/v0" });
 
 const addData = (data: any) => {
   console.log("adding");

@@ -49,11 +49,12 @@ function ConnectionProvider({ children }: { children: any }): ReactElement {
           setAccount(accounts[0]);
 
           setProvider(provider);
-          await addUser(accounts[0]);
+          // await addUser(accounts[0]);
         } catch (error) {
           console.log("Connection failed");
         }
-      } else if (walletType === "injected") {
+      }
+        if (walletType === "injected") {
         if (windowObj.ethereum) {
           try {
             // get chainId and accounts
@@ -63,7 +64,7 @@ function ConnectionProvider({ children }: { children: any }): ReactElement {
 
             const accounts = await web3.eth.getAccounts();
             setAccount(accounts[0]);
-            await addUser(accounts[0]);
+            // await addUser(accounts[0]);
             setProvider(null);
             localStorage.setItem("isConnected", "true");
             if (shouldToast) {
@@ -71,6 +72,7 @@ function ConnectionProvider({ children }: { children: any }): ReactElement {
             }
           } catch (error) {
             // show user rejected error
+            console.log(error)
             toast.error("User rejected connection");
           }
         } else {
@@ -104,14 +106,17 @@ function ConnectionProvider({ children }: { children: any }): ReactElement {
   }, [web3, appProviderURI, account, chainId, chainIdError, connectModalOpen]);
 
   const shouldReturn = (): boolean => {
-    if (web3 && appProviderURI && chainId) {
+    if (web3 && appProviderURI ) {
       return true;
     } else {
       return false;
     }
   };
 
-  console.log(web3, appProviderURI, chainId);
+  console.log(web3, appProviderURI, chainId, 'details');
+  if(chainId !== 5 ){
+    return <>Please connect to Goerli testnet </>
+  }
   return (
     <connectionContext.Provider value={value}>
       {shouldReturn() ? children : <div>Loading</div>}

@@ -381,12 +381,12 @@ const LaunchPadDetails = () => {
           });
         };
         const result = await buyTransactionHelper(callBack);
-        await addBuyToSale(
-          pool.data.presaleAddress,
-          account,
-          poolAmount,
-          system.currency
-        );
+        // await addBuyToSale(
+        //   pool.data.presaleAddress,
+        //   account,
+        //   poolAmount,
+        //   system.currency
+        // );
         console.log(result);
         updateUI();
       } catch (error) {

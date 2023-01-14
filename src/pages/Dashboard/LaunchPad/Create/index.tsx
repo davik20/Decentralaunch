@@ -295,28 +295,28 @@ const CreateLaunchpad = () => {
               value: utilityFunctions().toWei(minimumAllowed.data.platformFee),
             });
           event = receipt.events.SaleCreated;
-          await addSale(
-            account,
-            event.returnValues.newSaleAddress,
-            formInput.projectName,
-            formInput.tokenAddress,
-            formInput.preSaleRate,
-            formInput.listingRate,
-            tokens.tokensForSale,
-            tokens.tokensForLiquidity,
-            infoHash,
-            chainId,
-            formInput.softCap,
-            formInput.hardCap,
-            formInput.liquidityLockUp,
-            formInput.liquidityPercent,
-            formInput.minimumLimit,
-            formInput.maximumLimit
-          );
-          await addSaleToUser(account, {
-            saleName: formInput.projectName,
-            saleAddress: event.returnValues.newSaleAddress,
-          });
+          // await addSale(
+          //   account,
+          //   event.returnValues.newSaleAddress,
+          //   formInput.projectName,
+          //   formInput.tokenAddress,
+          //   formInput.preSaleRate,
+          //   formInput.listingRate,
+          //   tokens.tokensForSale,
+          //   tokens.tokensForLiquidity,
+          //   infoHash,
+          //   chainId,
+          //   formInput.softCap,
+          //   formInput.hardCap,
+          //   formInput.liquidityLockUp,
+          //   formInput.liquidityPercent,
+          //   formInput.minimumLimit,
+          //   formInput.maximumLimit
+          // );
+          // await addSaleToUser(account, {
+          //   saleName: formInput.projectName,
+          //   saleAddress: event.returnValues.newSaleAddress,
+          // });
         };
         return toCall();
       };

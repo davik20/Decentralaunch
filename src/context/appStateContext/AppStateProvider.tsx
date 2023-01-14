@@ -79,6 +79,8 @@ const getDexListForChain = (chainId: any) => {};
 
 function AppStateProvider({ children }: Props): ReactElement {
   const { web3, chainId } = useConnection();
+
+  console.log('chain id ', chainId)
   const { FireSalesLibraryContract } = useContracts();
 
   const [salesState, salesDispatch] = useReducer(salesReducer, {
@@ -139,6 +141,7 @@ function AppStateProvider({ children }: Props): ReactElement {
   }, []);
 
   useEffect(() => {
+    console.log(FireSalesLibraryContract, 'contract')
     if (FireSalesLibraryContract) {
       const getMinimumAllowed = async () => {
         setMinimumAllowed((prev: any) => ({
@@ -172,6 +175,7 @@ function AppStateProvider({ children }: Props): ReactElement {
               .call();
 
           console.log(minDexLiquidityPercent);
+          console.log('chain id ', chainId)
           setMinimumAllowed((prev: any) => ({
             ...prev,
             status: "resolved",

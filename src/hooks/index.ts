@@ -26,7 +26,7 @@ const getWeb3 = async (provider: string | null = null) => {
     if (!ALLOWEDCHAINIDS.includes(chainId)) {
       web3 = new Web3(DEFAULT_RPC_URL);
       console.log(web3);
-      chainId = DEFAULT_CHAIN_ID;
+      // chainId = DEFAULT_CHAIN_ID;
       chainIdError = true;
     }
   } else if (provider) {
@@ -41,7 +41,7 @@ const getWeb3 = async (provider: string | null = null) => {
     if (!ALLOWEDCHAINIDS.includes(chainId)) {
       web3 = new Web3(DEFAULT_RPC_URL);
       console.log(web3);
-      chainId = DEFAULT_CHAIN_ID;
+      // chainId = DEFAULT_CHAIN_ID;
       chainIdError = true;
     }
 

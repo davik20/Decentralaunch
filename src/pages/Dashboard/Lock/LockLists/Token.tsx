@@ -83,9 +83,7 @@ const TokenList = () => {
       });
 
       const result = Promise.all(functions);
-
       console.log(result);
-
       resolve(result);
     });
 

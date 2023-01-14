@@ -53,6 +53,24 @@ export const DEXES: any = {
       ],
     },
   ],
+  5: [
+    {
+      label: "Uniswap",
+      value: [
+        "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+        "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+        "0xc778417E063141139Fce010982780140Aa0cD5Ab",
+      ],
+    },
+    {
+      label: "Uniswap",
+      value: [
+        "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+        "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+        "0xc778417E063141139Fce010982780140Aa0cD5Ab",
+      ],
+    },
+  ],
   1337: [
     {
       label: "Uniswap",
@@ -104,6 +122,13 @@ export const CONTRACTS: any = {
     locker: "0x8f4c5f20A94002719482b2F290F54d930E8a4cB5",
     router: "0x1782e54d0037977Eb95b107Db2696d601cE2B11b",
   },
+  5: {
+
+    core: "0x5F690bA242F9fB81377796D443f86F02db17E7fe",
+    library: "0x04293614717e5CCE4B87698D03914Eda5eE214a6",
+    locker: "0x9DbeFD772a156695Cde8AC64a2554A191bc4EDd9",
+    router: "0x4965ff7A48F59d3Db50afCD7433cAcFa172Eba37",
+  }
 };
 
 export const CURRENCIES: any = {
@@ -114,9 +139,9 @@ export const CURRENCIES: any = {
 };
 
 // export const ALLOWEDCHAINIDS = [338, 25, 3, 4, 1337, 25];
-export const ALLOWEDCHAINIDS = [4];
+export const ALLOWEDCHAINIDS = [5];
 
-export const DEFAULT_CHAIN_ID = 4;
+export const DEFAULT_CHAIN_ID = 5;
 
 // export const DEFAULT_RPC_URL = "https://cronos-testnet-3.crypto.org:8545";
 let INFURA_KEY: any = process.env?.REACT_APP_INFURA_KEY;
