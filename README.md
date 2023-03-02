@@ -1,6 +1,6 @@
 ## Live link 
 
-https://decentralaunch.davikstone.com/app/dashboard
+https://decentralaunch.netlify.app/
 
 # Getting Started with Create React App
 
